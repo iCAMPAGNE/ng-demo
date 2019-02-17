@@ -4,11 +4,13 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { CalcComponent } from './calc/calc.component';
 import { UsersComponent } from './users/users.component';
+import { ContactComponent } from './contact/contact.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'calc', component: CalcComponent },
-  { path: 'users', component: UsersComponent }
+  { path: 'users', component: UsersComponent },
+  { path: 'contact', component: ContactComponent }
 ];
 
 @NgModule({
