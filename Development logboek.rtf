@@ -1,0 +1,247 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset0 Lucida Console;}{\f2\fmodern Lucida Console;}{\f3\fmodern\fcharset0 Lucida Console;}{\f4\fnil\fcharset0 Consolas;}{\f5\fnil Consolas;}{\f6\fmodern\fcharset0 Courier New;}{\f7\froman\fprq2\fcharset0 Times New Roman;}{\f8\fmodern\fprq1\fcharset0 Courier New;}}
+{\colortbl ;\red102\green102\blue102;\red0\green0\blue255;\red133\green153\blue0;\red0\green0\blue0;\red38\green139\blue210;\red42\green161\blue152;\red212\green212\blue212;\red7\green54\blue66;\red0\green191\blue0;\red191\green191\blue191;\red232\green242\blue254;\red0\green128\blue128;\red63\green127\blue127;\red0\green0\blue128;\red42\green0\blue255;\red255\green255\blue255;}
+{\*\generator Riched20 10.0.17134}\viewkind4\uc1 
+\pard\sl240\slmult1\f0\fs22\lang19\par
+\par
+\par
+\par
+\b\fs36 Frontend\par
+\b0\fs22\par
+
+\pard\sa200\sl276\slmult1\b\fs28 SASS / SCSS\par
+
+\pard\sl240\slmult1\b0\fs22 SASS = Syntactically Awesome Stylesheet \i (indention rather than brackets, no semicolon)\i0\par
+SCSS = Sassy CSS \i (also accepts CSS)\i0\par
+
+\pard 
+{\pntext\f0 1.\tab}{\*\pn\pnlvlbody\pnf0\pnindent0\pnstart1\pndec{\pntxta.}}
+\fi-358\li721\sl240\slmult1 Varable\line\f1\fs18 $primary-color: #3bbfce;\line .border \{\line   border-color: $primary-color;\line\}\f0\fs22\par
+{\pntext\f0 2.\tab}Nesting\line\f1\fs18 table.hl \{\line   margin: 2em 0;\line   td.ln \{\line     text-align: right;\line   \}\line\}\f0\fs22\par
+{\pntext\f0 3.\tab}Mixin\line\cf1\f1\fs20 @mixin achtergrond($kleur) \{\line     background-color: $kleur;\line\}\line table \{\line     td \{\line         @include achtergrond(red);\par
+{\pntext\f0 4.\tab}\cf0\f0\fs22 Partials en imports\line _partial.scss\line\f1\fs18 @import 'partial';\par
+
+\pard 
+{\pntext\f0 5.\tab}{\*\pn\pnlvlbody\pnf0\pnindent0\pnstart1\pndec{\pntxta.}}
+\fi-360\li720\sa200\sl276\slmult1\f0\fs22 Extend / Inheritance (share set of CSS properties)\line\f1\fs18 %message-shared \{\line   color: blue;\line\}\line .message \{\line   @extend %message-shared;\line\}\par
+
+\pard\sa200\sl276\slmult1\f0\fs22\par
+\b\fs32 Javascript\par
+\fs22 hoisting\b0 : variables (not functions) can be used before declaration (JS engine moves declarations to top). NOT VALID IN STRICT MODE.\par
+
+\pard\sl240\slmult1 scope of var: function block\line scope of let: enclosing block (e.g. for loop)\line\par
+\par
+20181106  \b Fabricator\b0\par
+In directory D:\\workspace\\Study\\FabricatorStudy\par
+\f1\fs20 curl -L {{\field{\*\fldinst{HYPERLINK https://github.com/fbrctr/fabricator/archive/master.tar.gz }}{\fldrslt{https://github.com/fbrctr/fabricator/archive/master.tar.gz\ul0\cf0}}}}\f1\fs20  | tar zx --strip 1\par
+npm start\par
+\f2\fs18 Cannot download "{{\field{\*\fldinst{HYPERLINK https://github.com/sass/node-sass/releases/download/v3.13.1/win32-x64-59_binding.node }}{\fldrslt{https://github.com/sass/node-sass/releases/download/v3.13.1/win32-x64-59_binding.node\ul0\cf0}}}}\f2\fs18 ":\par
+\f0\fs22\par
+\par
+\par
+\b\fs32 Jasmine\b0\fs22\par
+Jasmine is a javascript testing framework that supports a software development practice called Behaviour Driven Development, or BDD for short. It\rquote s a specific flavour of Test Driven Development (TDD).\par
+\par
+\par
+\par
+\par
+\par
+\b\fs32 Karma\par
+\b0\fs22 Karma is a tool which lets us spawn browsers and run jasmine tests inside of them all from the command line. The results of the tests are also displayed on the command line.\par
+Karma lets us run jasmine tests as part of a development tool chain which requires tests to be runnable and results inspectable via the command line.\par
+\par
+\par
+\b\fs36 Git\par
+\b0\fs22\par
+\f1\fs20 git config --global -e\par
+git config --list\par
+git config --global http.sslVerify false\par
+git config --global user.name "Frans Pattenier"\par
+git config --global user.email fpattenier@svb.nl\par
+\par
+git status\par
+git remote -v\par
+git remote show origin\par
+git pull\par
+git add webapp/pom.xml\par
+git commit -a -m "First version"\par
+git push origin master\par
+\par
+git tag 2.5.2\par
+git push origin --tags\f0\fs22\par
+\par
+\f1\fs20 gitk --all\par
+\f0\fs22\par
+\i commit history:\par
+\i0\f1\fs20 git log\par
+\f0\fs22\par
+\f1\fs20 git stash\par
+git stash list\par
+git stash pop\par
+git stash apply [stash@\{2\}]\par
+git stash show -p\par
+\par
+\i\f0\fs22 Merge branch to develop:\i0\f1\fs20\par
+ git checkout branch\par
+ git pull\par
+ git checkout develop\par
+ git pull\par
+ git merge branch\par
+\f0\fs22\par
+\i Start a new project locally and create new repo remote\i0\par
+\f2\fs18 git remote add origin {{\field{\*\fldinst{HYPERLINK https://gitlab.com/iCAMPAGNE/FilmGezien.git }}{\fldrslt{https://gitlab.com/iCAMPAGNE/FilmGezien.git\ul0\cf0}}}}\f2\fs18\par
+git push -u -f origin master\par
+\f0\fs22\par
+\i Uitchecken van branch\par
+
+\pard\box\brdrdash\brdrw0 \cbpat16\sl240\slmult1\i0\f2\fs18\lang9 git\f3\lang1043  checkout -\f2\lang9 b \f1\lang1033 feature/\f3\lang1043 IK-1234-Story-ter-implementatie\f0\fs22\lang9\par
+
+\pard\sl240\slmult1\lang19\par
+\i Pushen van nieuwe branch\par
+
+\pard\box\brdrdash\brdrw0 \cbpat16\sl240\slmult1\i0\f2\fs18\lang1043 git push --set-upstream origin release/Holmes-3\f3 1\f0\fs22\lang9\par
+
+\pard\sl240\slmult1\lang19\par
+\i Ophalen van tags\par
+\i0\f2\fs18\lang9 git fetch --tags\f0\fs22\line\par
+\i Opslaan credentials binnen project\line\i0\f1\fs18 git config credential.helper store\par
+git pull\par
+\f0\fs22\lang19\par
+\par
+\b\fs28 Angular 7\par
+\b0\i\fs22 Install Angular 2+  and create project\par
+\i0\f1\fs20 npm install -g @angular/cli\par
+ng version\par
+\f2 ng new \f3\lang1043 full-ng-stack\f2\lang19  --style=s\f3\lang1043 c\f2\lang19 ss\f3\lang1043  --routing=true\f2\lang19  --skip-git\f0\par
+\f1 cd \f3\lang1043 full-ng-stack\f1\lang19\par
+\i\f0\fs22 Set style extension to scss for existing angular project:\par
+\i0\f2\fs18 ng config schematics.@schematics/angular:component.styleext s\f3\lang1043 c\f2\lang19 ss\par
+\i\f0\fs22 Can also be edited in angular.json:\par
+\i0\f4\fs18   "schematics": \{\par
+    "@schematics/angular:component": \{\par
+      "styleext": "s\lang1043 c\lang19 ss"\par
+    \}\par
+  \}\fs22\par
+\f0\par
+\i Develop and run Angular project\par
+\i0\f3\fs18\lang1043 ng build\f2\lang19\par
+\f3\lang1043 n\f2\lang19 g serve -o\par
+\f0\fs22\par
+Component is basic building block of Angular which consists of three primary elements:\par
+    The HTML template\par
+    The logic\par
+    The styling (CSS, Sass, Stylus, etc..)\par
+\par
+Component imports  the @angular/core library, and then it defines a @Component decorator:\par
+\cf3\f5\fs20 import\cf4  \{ \cf5 Component\cf4  \} \cf3 from\cf4  \cf6 '@angular/core'\cf4 ;\cf0\par
+\cf4 @\cf5 Component\cf4 (\{\cf0\par
+\cf4   selector: \cf6 'app-root'\cf4 ,\cf0\par
+\cf4   templateUrl: \cf6 './app.component.html'\cf4 ,\cf0\par
+\cf4   styleUrls: [\cf6 './app.component.css'\cf4 ]\cf0\par
+\cf4\})\cf0\par
+\cf3\highlight7 export\cf4\highlight0  \cf8\b class\cf4\b0  \cf5 AppComponent\cf4  \{\cf0\par
+\cf4   title \cf3 =\cf4  \cf6 'full-ng-stack'\cf4 ;\cf0\par
+\cf4\}\cf0\par
+\f0\fs22\par
+\i Create new component:\par
+\i0\f2\fs18 ng generate component navigation\par
+\i\f0\fs22 creates new directory \i0 src/app/\b navigation\b0 :\par
+\cf9\f2\fs18 CREATE\cf0  src/app/navigation/navigation.component.html\par
+\cf9 CREATE\cf0  src/app/navigation/navigation.component.spec.ts\par
+\cf9 CREATE\cf0  src/app/navigation/navigation.component.ts\par
+\cf9 CREATE\cf0  src/app/navigation/navigation.component.css\par
+\cf10 UPDATE\cf0  src/app/app.module.ts (\f0\lang1043 inserts \cf5\highlight11\f5\fs20 NavigationComponent\cf0\highlight0\f3\fs18 )\f2\lang19\par
+\f0\fs22\par
+\f2\fs18 ng \f3\lang1043 g\f2\lang19  \f3\lang1043 c\f2\lang19  \f3\lang1043 home\f2\lang19\par
+\f0\fs22\par
+\par
+\i Replace content in \i0 app.component.html \i into\i0\par
+<app-nav></app-nav>\par
+\par
+\par
+\cf4\f5\fs20     appTitle\cf3 :\cf4  \cf3 string\cf4  \cf3 =\cf4  \cf6 'myapp'\cf4 ;\cf0\par
+\f0\fs22\par
+\cf12\highlight11\f5\fs20 <\cf13\highlight7\ul button\cf0\highlight11\ulnone  \cf14\b (\ul click\ulnone )\cf4\ul\b0 =\cf15\ulnone\i "firstClick()"\cf12\i0 >\cf4\ul Click\ulnone  \ul me\cf12\ulnone <\ul /\cf13\highlight7\ulnone button\cf12\highlight11 >\cf0\highlight0\f0\fs22\par
+\par
+\i Services\par
+\i0\f1\fs20 ng generate service data\par
+\f0\fs22\par
+\par
+forms: template driven and reactive forms.\par
+\par
+\par
+\b\fs28 Node / npm\par
+\b0\fs22\par
+\par
+\f1\fs20 npm install node-sass@latest\par
+\f0\fs22\par
+
+\pard\nowidctlpar\f1\fs20\lang1023 npm config list\par
+
+\pard\sl240\slmult1\lang19 npm config set username=deployment\par
+\f0\fs22\par
+\par
+\par
+\b\fs32 Maven\par
+\b0\fs22 Indien ~/.m2/settings.xml bestaat en een verwijzing naar een nexus heeft wordt deze gebruikt. Als deze nexus dan niet bereikbaar is dan faalt het bouw-proces.\par
+\par
+mvn clean install\par
+mvn clean package\par
+mvn -Dmaven.test.skip=true package\par
+\par
+\f1\fs20     mvn clean package wildfly:deploy\par
+    mvn clean package wildfly:undeploy\par
+\f0\fs22\par
+\i To support Eclipse, use Maven command :\par
+\i0\f1\fs20 mvn eclipse:eclipse -Dwtpversion=2.0\par
+\f0\fs22\par
+\i Create a new maven project in Eclipse\par
+\i0 New Project -> Maven Project -> (no simple project) -> maven-archetype-webapp\par
+DO NOT choose maven-archetype-j2ee-simple (creates several dirs in root)\par
+Add directory java to src/main (will show up in Java Resources)\par
+\par
+
+\pard\nowidctlpar\i\fs24\lang2057 Use debug option to check which settings.xml is used:\line\i0\f6\lang1023 mvn -X\f7  \par
+\par
+
+\pard\sl240\slmult1\b\f0\fs32\lang19 Bash\line\b0\f6\fs20 find . -name somefile.txt\f8\par
+\f2\fs18 grep -rnw .. -e 'app317'\f0\fs22\par
+\par
+\b\fs32 Java\par
+\b0\fs22\par
+\i Create Java projects with Maven\par
+\i0\f1\fs18 mvn archetype:generate -DgroupId=nl.frans.mavenapp -DartifactId=java-app -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false\par
+\f0\fs22\par
+\f1\fs20     cd java-app\par
+    mvn package\par
+    java -cp target/java-app-1.0-SNAPSHOT.jar nl.frans.mavenapp.App\par
+\i\f0\fs22 Run a java program (main)\par
+\i0\f1\fs20 java -jar ./target/JavaProgram.jar --Parameter=Value\par
+\f0\fs22\par
+
+\pard\sa200\sl276\slmult1\b\fs24 Collections\par
+\fs22 Set\b0\line\i Unique elements, duplicates wil not be stored.\line Natural order (e.g. Set of strings will be ordered alphabetically.\i0\par
+\b Map\b0\par
+
+\pard\sl240\slmult1\b List\par
+
+\pard\sa200\sl276\slmult1\b0\f1\fs20\tab Integer[] sourceArray = \{ 0, 1, 2, 3, 4, 5 \};\par
+\f0\fs22 Convert this array to a fixed-sized list that will still be backed by the array:\line\f1\fs20\tab List<Integer> targetList = Arrays.asList(sourceArray);\par
+\f0\fs22 Convert to a standard ArrayList:\line\f1\fs20\tab List<Integer> targetList = new ArrayList<Integer>(Arrays.asList(sourceArray));\par
+\f0\fs22\par
+\f1\fs20 System.getProperty("user.dir")\par
+
+\pard\sl240\slmult1\f0\fs22\par
+
+\pard\box\brdrdash\brdrw0 \cbpat16\sl240\slmult1\b\lang9 Quartz Cron job\par
+\b0 0 0/5 * * *   (every five minutes)\par
+ minute hour day-of-month month day-of-week\par
+* any value \par
+ , value list separator \par
+ - range of values \par
+  / step values \par
+
+\pard\sl240\slmult1\lang19\par
+\par
+\par
+}
+ 
